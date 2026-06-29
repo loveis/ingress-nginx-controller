@@ -23,6 +23,14 @@ https://hub.docker.com/r/loveis/ingress-nginx-controller
 
  
 
+## forklin 배
+https://github.com/forkline/ingress-nginx/releases 에 보니 빌더해서 배포를 하고 있다.
+굳이 빌더할 필요가 없을듯 하다.
+```
+ghcr.io/forkline/ingress-nginx/controller:2026.6.28
+ghcr.io/forkline/ingress-nginx/nginx:2026.6.28
+ghcr.io/forkline/ingress-nginx/kube-webhook-certgen:2026.6.28
+```
 
  
 ## License
