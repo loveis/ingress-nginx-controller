@@ -421,6 +421,10 @@ spec:
         app.kubernetes.io/version: 1.15.8
     spec:
       automountServiceAccountToken: true
+      tolerations:
+      - effect: NoSchedule
+        key: node-role.kubernetes.io/control-plane
+        operator: Exists
       containers:
       - args:
         - /nginx-ingress-controller
@@ -535,6 +539,10 @@ spec:
       name: ingress-nginx-admission-create
     spec:
       automountServiceAccountToken: true
+      tolerations:
+      - effect: NoSchedule
+        key: node-role.kubernetes.io/control-plane
+        operator: Exists
       containers:
       - args:
         - create
@@ -589,6 +597,10 @@ spec:
       name: ingress-nginx-admission-patch
     spec:
       automountServiceAccountToken: true
+      tolerations:
+      - effect: NoSchedule
+        key: node-role.kubernetes.io/control-plane
+        operator: Exists
       containers:
       - args:
         - patch
